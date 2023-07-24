@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika Di Non-Boolean</title>
+  </head>
+  <body>
+    <script>
+      console.log("Nama" || ""); // karena nilai pertama truthy maka akan di ambil
+      console.log("" || []); // karena nilai kedua truthy maka akan di ambil
+      console.log(0 || 10); // karena nilai kedua truthy maka akan di ambil
+      console.log("0" || "NOL"); // karena kedua nila truthy maka yang pertama yang akan di ambil
+      console.log(0 || false); // karena kedua nila falsy maka yang terakhir yang akan di ambil
+
+      const person = {
+        firstName: "",
+        lastName: "Chabib",
+      };
+
+      const name = person.firstName || person.lastName;
+      console.log(name);
+
+      console.log("HELLO" && ""); // karena nilai terakhir falsy maka akan di ambil
+      console.log("" && []); // karena nilai pertama falsy maka akan di ambil
+      console.log("0" && "NOL"); // karena kedua nila truthy maka yang terakhir yang akan di ambil
+    </script>
+  </body>
+</html>

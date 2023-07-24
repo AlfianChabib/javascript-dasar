@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      function sum(name, ...data) {
+        // ...data ini menjadi rest parameter, maka otomatis menjadi array
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        console.log(`Total ${name} adalah ${total}`);
+      }
+
+      sum("Orange", 1, 2, 3, 4, 5);
+      sum("Apple", 2, 4, 6, 8, 10);
+      sum("Banana", 9, 4, 8, 1, 5);
+
+      const values = [10, 10, 10, 10, 10];
+      sum("Orange", ...values);
+
+      // arguments object
+      function oldSum() {
+        let total = 0;
+        for (const item of arguments) {
+          total += item;
+        }
+        console.log(`Total adalah ${total}`);
+      }
+
+      oldSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    </script>
+  </body>
+</html>

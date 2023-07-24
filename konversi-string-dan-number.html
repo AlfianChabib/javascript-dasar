@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi String dan Number</title>
+  </head>
+  <body>
+    <script>
+      const value1 = "1"; //string
+      const value2 = 1; //number
+      const sum = value1 + value2;
+
+      console.log(sum); // maka hasilmya akan 11, karena string ditambah number maka hasilnya akan string, maka apanila kita ingin menjumlahkan sebuah angka maka kita harus mengkonversikan string ke number
+
+      // constoh mengkonversikan string ke number
+      const value3 = parseInt("1"); // parseInt() hanya mengkoncersi bilangan bulat, apabila kita memasukkan 1.1 maka hasilnya akan 1
+      const value4 = parseFloat("1.5"); // parseFloat() hanya mengkoncersi bilangan desimal
+
+      console.log(value3 + value4); // maka hasilnya 2.5 karena sama2 number
+
+      // contoh mengkonversi number ke string
+      const a = 1;
+      const b = 2;
+      const total = a + b;
+      console.log(total); // ini hasilnya akan 3, karena masih number, jika kita ingin mengkonversikan nya ke dalam string kita bisa menggunakan toString()
+      const totalString = a.toString() + b.toString();
+      console.log(totalString); // ini hasilnya akan 12 karena sudah di konversikan ke string
+
+      // NaN
+      console.log(parseFloat("1salah")); // hasilnya akan 1, karena javascript hanya mengkonversi angkanya saja
+      console.log(parseInt("1.1salah")); // sama seperti di atas, hasilnya akan 1.1 karena masih ada angkanya
+      console.log(parseFloat("salah")); // hasilnya akan NaN, karena tidak ada angkanya atau tidak valid
+      console.log(parseInt("salah")); // hasilnya akan NaN, karena tidak ada angkanya atau tidak valid
+
+      // operasi pada NaN
+      const value6 = Number("salah"); // NaN
+      const value7 = 100;
+      const jumlah = value6 + value7;
+      console.log(jumlah); // hasilnya tetap NaN, kareana kita tidak bisa menjumlahkan NaN dengan number
+
+      // isNan()
+      const value8 = Number("salah");
+      const value9 = 10;
+      console.log(isNaN(value8)); // hasilnya true karena NaN
+      console.log(isNaN(value9)); // hasilnya false karena number
+    </script>
+  </body>
+</html>

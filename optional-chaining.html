@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <script>
+      // Error Mengakses Property Nullish
+      // const person = {};
+      // const country = person.address.country;
+      // console.log(country);
+
+      // pengecekan menggunakan if
+      // let orang = {};
+      // let say;
+      // if (orang.address !== undefined && orang.address !== null) {
+      //   say = orang.address.country;
+      // }
+      // console.log("SUCCESS");
+      // console.log(say);
+
+      // menggunakan Optional Chaining
+      let orang2 = {};
+      console.log(orang2?.address?.country);
+    </script>
+  </body>
+</html>

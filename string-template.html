@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      // cara mengambil variable
+      const nama = "Alfian Chabib";
+      console.log(`Nama : ${nama}`);
+      // memasukkan variable ke dalam ${nama variable}
+
+      // contoh lain
+      const firstName = "Alfian";
+      const lastName = "Chabib";
+      console.log(`Nama saya : ${firstName} ${lastName}`);
+
+      // contoh Expression di String Template
+      const fullName = "Alfian Chabib";
+      let nilai = 90;
+      console.log(`Nama : ${fullName} lulus : ${nilai >= 70}`);
+      // output => Nama : Alfian Chabib lulus : true
+
+      // multiline string
+      const multiLineString = `
+      Nama saya adalah Alfian Chabib
+      Saya Lagi Belajar
+      Well
+      `;
+      document.writeln("<pre>");
+      document.writeln(multiLineString);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>

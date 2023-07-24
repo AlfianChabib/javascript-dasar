@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      let arrayKosong = [];
+      let array = ["Alfian", "Chabib", 1, 2, true]; // array bisa berisikan string, number dan boolean
+
+      // menambahkan data ke aray
+      const names = [];
+      names.push("Alfian");
+      names.push("Chabib", 1, 2, true);
+      console.table(names);
+
+      // contoh mengambil data menggunakan index
+      console.log(names[0]); // output alfian
+      console.log(names[1]); // output chabib
+      console.log(names[2]); // output 1
+
+      // contoh mengubah data dengan index
+      names[0] = "Programmer"; // mengubah data alfian menjadi programmer
+      names[1] = "Pemula"; // mengubah data chabib menjadi pemula
+      console.table(names);
+
+      // contoh menghapus data
+      delete names[2]; // menghapus data 1, tidak menghapus data indexnyna tetapi datanya saja yang di hapus
+      console.table(names);
+
+      // contoh menambahkan data baru
+      names.push("tambah lagi"); // menambahkan data ke index terakhir
+      console.table(names);
+
+      // contoh menambahkan array ke dalam array
+      names.push(["array baru", "array baru 2"]); // menambahkan array ke dalam array
+      console.table(names);
+    </script>
+  </body>
+</html>
